@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"sync"
 
-	"slippage/generator"
-	"slippage/solver"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/solver"
 )
 
 // NoncePattern different nonce generation patterns

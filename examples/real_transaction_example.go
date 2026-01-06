@@ -11,10 +11,10 @@ import (
 	"os"
 	"time"
 
-	"slippage/ethereum"
-	"slippage/generator"
-	"slippage/pattern"
-	"slippage/solver"
+	"breaking-ecdsa/ethereum"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/pattern"
+	"breaking-ecdsa/solver"
 )
 
 // TransactionInfo transaction information (similar to main1.go)

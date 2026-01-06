@@ -10,9 +10,9 @@ import (
 	"math/big"
 	"os"
 
-	"slippage/ethereum"
-	"slippage/generator"
-	"slippage/solver"
+	"breaking-ecdsa/ethereum"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/solver"
 )
 
 // EthereumData JSON data structure

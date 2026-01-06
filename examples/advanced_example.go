@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"slippage/config"
-	"slippage/generator"
-	"slippage/solver"
+	"breaking-ecdsa/config"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/solver"
 )
 
 // This file shows a more advanced example of using the tool
@@ -127,4 +127,3 @@ func exampleWithDifferentCurves() {
 		}
 	}
 }
-

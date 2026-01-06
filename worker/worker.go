@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"sync"
 
-	"slippage/config"
-	"slippage/generator"
-	"slippage/solver"
+	"breaking-ecdsa/config"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/solver"
 )
 
 // Result result of a task including generated data and recovered key
@@ -241,4 +241,3 @@ func (ps *ParallelSolver) SolveBatch(dataChan <-chan *generator.GeneratedData) <
 
 	return results
 }
-

@@ -1,4 +1,4 @@
-module slippage
+module breaking-ecdsa
 
 go 1.24.0
 

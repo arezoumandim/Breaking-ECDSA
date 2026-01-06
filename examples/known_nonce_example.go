@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"math/big"
 
-	"slippage/config"
-	"slippage/generator"
-	"slippage/pattern"
-	"slippage/solver"
+	"breaking-ecdsa/config"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/pattern"
+	"breaking-ecdsa/solver"
 )
 
 // This example shows how to recover the private key

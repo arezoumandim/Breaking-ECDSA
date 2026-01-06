@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"slippage/generator"
+	"breaking-ecdsa/generator"
 )
 
 // Solver solver for recovering private key from signatures with affine nonces
@@ -103,4 +103,3 @@ func (s *Solver) VerifyPrivateKey(
 ) bool {
 	return recoveredKey.Cmp(originalKey) == 0
 }
-

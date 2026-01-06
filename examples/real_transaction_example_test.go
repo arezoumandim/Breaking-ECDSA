@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	"slippage/generator"
+	"breaking-ecdsa/generator"
 )
 
 // TestRealTransactionExample simple test for real_transaction_example
@@ -421,4 +421,3 @@ func BenchmarkRealTransactionExample(b *testing.B) {
 		_, _ = example.FindPrivateKeyFromTransactions()
 	}
 }
-

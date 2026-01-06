@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"slippage/config"
-	"slippage/ethereum"
-	"slippage/generator"
-	"slippage/pattern"
-	"slippage/solver"
-	"slippage/worker"
+	"breaking-ecdsa/config"
+	"breaking-ecdsa/ethereum"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/pattern"
+	"breaking-ecdsa/solver"
+	"breaking-ecdsa/worker"
 )
 
 func main() {
@@ -56,7 +56,7 @@ func runDemoParallel(cfg *config.Config) {
 		cfg.AffineRelationship.A.String(),
 		cfg.AffineRelationship.B.String())
 	fmt.Printf("Message: %s\n", string(cfg.Message1))
-	
+
 	numWorkers := runtime.NumCPU()
 	if numWorkers > 8 {
 		numWorkers = 8 // limit to 8 workers to prevent overhead
@@ -72,7 +72,7 @@ func runDemoParallel(cfg *config.Config) {
 	// receive result
 	var r *worker.Result
 	done := make(chan bool)
-	
+
 	go func() {
 		for result := range results {
 			r = result
@@ -202,7 +202,7 @@ func runBatchMode(cfg *config.Config) {
 	}
 
 	fmt.Printf("\n--- Running %d tests (Multi-Thread) ---\n", numTests)
-	
+
 	numWorkers := runtime.NumCPU()
 	if numWorkers > 8 {
 		numWorkers = 8

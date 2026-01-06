@@ -148,7 +148,7 @@ go run examples/real_transaction_example.go \
 ### Project Structure
 
 ```
-slippage/
+breaking-ecdsa/
 ├── config/          # Configuration management
 ├── generator/       # Key and signature generation
 ├── solver/          # Private key recovery algorithms
@@ -200,9 +200,9 @@ Real-world Ethereum analysis:
 ```go
 import (
     "math/big"
-    "slippage/config"
-    "slippage/generator"
-    "slippage/solver"
+    "breaking-ecdsa/config"
+    "breaking-ecdsa/generator"
+    "breaking-ecdsa/solver"
 )
 
 // Configure affine relationship: k₂ = 2·k₁ + 3
@@ -232,7 +232,7 @@ if recoveredKey.Cmp(data.KeyPair.PrivateKey) == 0 {
 ### Code Example: Brute-Force Search
 
 ```go
-import "slippage/pattern"
+import "breaking-ecdsa/pattern"
 
 // Initialize brute-force solver
 bfs := pattern.NewBruteForceSolver(curve)
@@ -256,7 +256,7 @@ for result := range results {
 ### Code Example: Ethereum Counter Nonce
 
 ```go
-import "slippage/ethereum"
+import "breaking-ecdsa/ethereum"
 
 // Create Ethereum address
 address, _ := ethereum.NewEthereumAddress(curve)

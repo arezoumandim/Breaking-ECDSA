@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"slippage/generator"
-	"slippage/solver"
+	"breaking-ecdsa/generator"
+	"breaking-ecdsa/solver"
 )
 
 // EthereumAddress simulation of an Ethereum address

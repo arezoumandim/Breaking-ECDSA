@@ -7,7 +7,7 @@ import (
 	"crypto/sha256"
 	"math/big"
 
-	"slippage/config"
+	"breaking-ecdsa/config"
 )
 
 // SignatureData signature data including r, s, z (message hash)
@@ -25,12 +25,12 @@ type KeyPair struct {
 
 // GeneratedData generated data including keys and signatures
 type GeneratedData struct {
-	KeyPair     KeyPair
-	Signature1  SignatureData
-	Signature2  SignatureData
-	K1          *big.Int // first nonce
-	K2          *big.Int // second nonce (with affine relationship)
-	Config      *config.Config
+	KeyPair    KeyPair
+	Signature1 SignatureData
+	Signature2 SignatureData
+	K1         *big.Int // first nonce
+	K2         *big.Int // second nonce (with affine relationship)
+	Config     *config.Config
 }
 
 // GenerateKeyPair generate ECDSA key pair
@@ -72,7 +72,7 @@ func SignWithNonce(curve elliptic.Curve, privateKey *big.Int, message []byte, k 
 	}
 	kGx, _ := curve.ScalarBaseMult(kBytes)
 	r := new(big.Int).Mod(kGx, n)
-	
+
 	// check that r is not zero (in ECDSA r must not be zero)
 	if r.Sign() == 0 {
 		return nil, ErrInvalidNonce
@@ -158,4 +158,3 @@ type Error struct {
 func (e *Error) Error() string {
 	return e.Message
 }
-
