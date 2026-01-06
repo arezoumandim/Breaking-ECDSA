@@ -205,7 +205,7 @@ func (ec *EtherscanClient) GetTransactionByHash(txHash string) (*EtherscanTransa
 		fmt.Printf("  This transaction cannot be used for key recovery\n")
 	} else {
 		fmt.Printf("✓ r, s, v received for transaction %s\n", txHash)
-		fmt.Printf("  R: %s... (length: %d), S: %s... (length: %d), V: %s\n", 
+		fmt.Printf("  R: %s... (length: %d), S: %s... (length: %d), V: %s\n",
 			rawTx.R[:min(20, len(rawTx.R))], len(rawTx.R),
 			rawTx.S[:min(20, len(rawTx.S))], len(rawTx.S),
 			rawTx.V)

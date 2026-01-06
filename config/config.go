@@ -46,4 +46,3 @@ func SECP256k1Config() *Config {
 	// For simplicity, we use P256 but can add SECP256k1 later
 	return cfg
 }
-
