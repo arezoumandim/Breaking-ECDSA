@@ -1,0 +1,9 @@
+{
+    "address": "ADDRESS_HERE",
+    "public_key": "PUBLIC_KEY_HERE",
+    "tx_ids": [
+      "TX_ID_1_HERE",
+      "TX_ID_2_HERE"
+    ]
+}
+
